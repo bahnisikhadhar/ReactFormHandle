@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React,{ useState } from "react";
+import { GrammarlyEditorPlugin } from '@grammarly/editor-sdk-react'
 
 function FormControlled() {
   const [inputs, setInputs] = useState({});
@@ -35,7 +36,9 @@ console.log(inputs);
         <option value="Fiat">Fiat</option>
       </select> <br /> <br />
       
+      <GrammarlyEditorPlugin clientId="client_AQxzw2sMWyyDPHVVVBGWbP">
       <textarea name="textarea" onChange={onchange} />
+      </GrammarlyEditorPlugin>
 
       <input type="submit" />
      </form>
